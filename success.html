@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Доступ к закрытому Telegram-каналу</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #232526 0%, #414345 100%);
+      color: #222;
+      font-family: 'Montserrat', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.18);
+      padding: 3rem 2.5rem 2.5rem 2.5rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      animation: fadeIn 1s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: none; }
+    }
+    .success-icon {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 1.2rem;
+      display: inline-block;
+      background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(67, 206, 162, 0.15);
+      position: relative;
+    }
+    .success-icon svg {
+      width: 38px;
+      height: 38px;
+      color: #fff;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #185a9d;
+      margin-bottom: 0.7rem;
+      letter-spacing: -1px;
+    }
+    .desc {
+      font-size: 1.08rem;
+      color: #444;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+    .telegram-block {
+      background: linear-gradient(90deg, #0088cc 0%, #43cea2 100%);
+      border-radius: 12px;
+      padding: 1.5rem 1rem 1.2rem 1rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 2px 12px rgba(0,136,204,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1.2s .2s backwards;
+    }
+    .telegram-logo {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0.7rem;
+    }
+    .telegram-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.5px;
+    }
+    .telegram-desc {
+      color: #eaf6fb;
+      font-size: 1rem;
+      margin-bottom: 0.7rem;
+    }
+    .btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+      color: #fff;
+      padding: 0.9rem 2.2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 0.5rem;
+    }
+    .btn:hover {
+      background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+    .steps {
+      margin-top: 2.2rem;
+      text-align: left;
+    }
+    .steps-title {
+      font-weight: 600;
+      color: #185a9d;
+      margin-bottom: 0.7rem;
+      font-size: 1.08rem;
+    }
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .steps-list li {
+      margin-bottom: 0.7rem;
+      padding-left: 1.2rem;
+      position: relative;
+      color: #444;
+      font-size: 1rem;
+    }
+    .steps-list li:before {
+      content: '';
+      position: absolute;
+      left: 0.2rem;
+      top: 0.6rem;
+      width: 7px;
+      height: 7px;
+      background: #43cea2;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #185a9d33;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1.2rem 0.5rem;
+      }
+      .telegram-block {
+        padding: 1rem 0.3rem 0.8rem 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container card">
+    <div class="success-icon">
+      <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="24" fill="#43cea2"/><path d="M34.5 17.5L21.5 30.5L14 23" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h2>Доступ открыт!</h2>
+    <div class="desc">
+      Поздравляем! Ваша оплата прошла успешно.<br>
+      Теперь вы получили доступ к нашему <b>закрытому Telegram-каналу</b> для участников интенсива.<br>
+      В канале вы найдёте:
+      <ul style="margin: 1rem 0 0 0; padding-left: 1.2rem; text-align:left; color:#185a9d; font-weight:600;">
+        <li>🔥 Эксклюзивные материалы и разборы</li>
+        <li>💬 Общение с экспертами и участниками</li>
+        <li>📅 Актуальные анонсы и расписание</li>
+        <li>🎁 Бонусы и подарки для участников</li>
+      </ul>
+    </div>
+    <div class="telegram-block">
+      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4e8.svg" alt="Telegram" class="telegram-logo" />
+      <div class="telegram-title">Вступайте в Telegram-канал</div>
+      <div class="telegram-desc">Нажмите на кнопку ниже, чтобы перейти в закрытый канал для участников.</div>
+      <a href="#" class="btn telegram-link" id="telegram-link">Перейти в Telegram</a>
+    </div>
+    <div class="steps">
+      <div class="steps-title">Что делать дальше?</div>
+      <ul class="steps-list">
+        <li>Перейдите по кнопке выше и вступите в канал.</li>
+        <li>Ознакомьтесь с закреплённой информацией и расписанием.</li>
+        <li>Задавайте вопросы и участвуйте в обсуждениях.</li>
+        <li>Следите за новостями и обновлениями!</li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    async function checkPaymentAndShowLink() {
+      const paymentId = localStorage.getItem('paymentId');
+      if (!paymentId) {
+        document.querySelector('.container').innerHTML = '<h2 style="color:#c0392b">Ошибка</h2><p>Нет данных о платеже.</p>';
+        return;
+      }
+      try {
+        const response = await fetch(`http://localhost:4001/api/payment/${paymentId}/status`);
+        const data = await response.json();
+        if (data.status === 'succeeded' || data.status === 'pending') {
+          document.getElementById('telegram-link').href = data.telegramLink || 'https://t.me/your_private_channel';
+        } else {
+          document.querySelector('.container').innerHTML = '<h2 style="color:#c0392b">Оплата не подтверждена</h2><p>Сначала оплатите участие.</p>';
+        }
+      } catch (err) {
+        document.querySelector('.container').innerHTML = '<h2 style="color:#c0392b">Ошибка</h2><p>Не удалось проверить статус платежа.</p>';
+      } finally {
+        localStorage.removeItem('paymentId');
+      }
+    }
+    checkPaymentAndShowLink();
+  </script>
+</body>
+</html> 
