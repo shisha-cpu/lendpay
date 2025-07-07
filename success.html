@@ -194,7 +194,7 @@
         return;
       }
       try {
-        const response = await fetch(`http://localhost:4001/api/payment/${paymentId}/status`);
+        const response = await fetch(`https://api.annamarinova.online.annamarinova.online/api/payment/${paymentId}/status`);
         const data = await response.json();
         if (data.status === 'succeeded' || data.status === 'pending') {
           document.getElementById('telegram-link').href = data.telegramLink || 'https://t.me/your_private_channel';

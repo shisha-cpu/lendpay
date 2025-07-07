@@ -46,7 +46,7 @@ app.post('/api/payment', async (req, res) => {
       capture: true,
       confirmation: {
         type: 'redirect',
-        return_url: process.env.RETURN_URL || 'http://127.0.0.1:5501/success.html?paymentId={payment_id}'
+        return_url: process.env.RETURN_URL || 'http://https://api.annamarinova.online.annamarinova.online/success.html?paymentId={payment_id}'
       },
       metadata: {
         timestamp: new Date().toISOString()

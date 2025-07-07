@@ -46,13 +46,13 @@ if (paymentForm) {
     paymentForm.querySelector('button[type="submit"]').disabled = true;
     
     try {
-      const response = await fetch('http://localhost:4001/api/payment', {
+      const response = await fetch('https://api.annamarinova.online.annamarinova.online/api/payment', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount })
       });
       
-      console.log('Ответ от сервера получен');
+      console.log(response);
       const data = await response.json();
       console.log('Данные ответа:', data);
       
@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   const paymentId = localStorage.getItem('paymentId');
   if (paymentId) {
     try {
-      const response = await fetch(`http://localhost:4001/api/payment/${paymentId}/status`);
+      const response = await fetch(`https://api.annamarinova.online.annamarinova.online/api/payment/${paymentId}/status`);
       const data = await response.json();
       console.log('Статус платежа:', data);
       
