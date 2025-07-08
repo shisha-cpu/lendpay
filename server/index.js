@@ -25,6 +25,7 @@ app.use(express.json());
 
 // Маршрут для создания платежа
 app.post('/api/payment', async (req, res) => {
+
   console.log('POST /api/payment вызван');
   try {
     const { amount } = req.body;
@@ -82,6 +83,7 @@ app.get('/api/payment/:id/status', (req, res) => {
     console.log('Платёж не найден:', paymentId);
     return res.status(404).json({ error: 'Платеж не найден' });
   }
+console.log(payment.status);
 
   // Если статус succeeded или pending, выдаём ссылку на канал
   const showTelegram = payment.status === 'succeeded' ;
