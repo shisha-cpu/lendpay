@@ -84,7 +84,7 @@ app.get('/api/payment/:id/status', (req, res) => {
   }
 
   // Если статус succeeded или pending, выдаём ссылку на канал
-  const showTelegram = payment.status === 'succeeded' || payment.status === 'pending';
+  const showTelegram = payment.status === 'succeeded' ;
   res.json({
     status: payment.status,
     amount: payment.amount,
